@@ -1,0 +1,33 @@
+[package]
+name = "octofedi"
+version = "0.3.4"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "2.9.0"
+actix-web = "4.5.1"
+chrono = { version = "0.4.26", features = ["serde"] }
+env_logger = "0.11.1"
+log = "0.4.20"
+lru = "0.12.0"
+once_cell = "1.19.0"
+regex = "1.10.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+tokio-util = "0.7.10"
+url = { version = "2.5.0", features = ["serde"] }
+
+# local
+content_queue = { path = "../common/content_queue" }
+fedineko_http_client = { path = "../common/clients/fedineko_http_client" }
+fedineko_url_utils = { path = "../common/fedineko_url_utils" }
+pinnifed = { path = "../common/pinnifed" }
+lazy_activitypub = { path = "../common/lazy_activitypub" }
+proxydon_client = { path = "../common/clients/proxydon_client" }
+proxydon_cache = { path = "../common/clients/proxydon_cache" }
+puprik = { path = "../common/puprik" }
+puprik_signature = { path = "../common/puprik_signature" }
+unified_content_model = { path = "../models/unified_content_model" }
